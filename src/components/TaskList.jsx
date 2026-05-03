@@ -13,7 +13,7 @@ class TaskList extends Component {
   
   handlerDelete = (taskId)=> {
     this.setState({
-        tasks: this.state.tasks.filter((id) => id !== taskId)
+        tasks: this.state.tasks.filter(({id}) => id !== taskId)
     })
   }
 
@@ -36,7 +36,6 @@ class TaskList extends Component {
   } 
 
   render() {
-    console.log(this.state.inputText);
     
     return <>
     <input type="text" value={this.state.inputText} onChange={this.handlerInput}/>
